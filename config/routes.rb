@@ -1,4 +1,10 @@
 CongassApp::Application.routes.draw do
+
+  namespace :games do
+    resources :surveys
+    resources :attempts, :only => [:new, :create]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
